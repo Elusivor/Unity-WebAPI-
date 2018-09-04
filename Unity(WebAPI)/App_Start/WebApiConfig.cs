@@ -14,11 +14,17 @@ namespace Unity_WebAPI_
             // Web API routes
             config.MapHttpAttributeRoutes();
 
+            //config.Routes.MapHttpRoute(
+            //    name: "DefaultApi",
+            //    routeTemplate: "api/{controller}/{id}",
+            //    defaults: new { id = RouteParameter.Optional }
+            //    );
+
             config.Routes.MapHttpRoute(
-                name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
-            );
+                name: "Movie",
+                routeTemplate: "api/mov/{id}",
+                defaults: new { controller = "movie", id = RouteParameter.Optional }
+             );
         }
     }
 }

@@ -10,7 +10,7 @@ namespace Unity_WebAPI_.Controllers
     public class TestController : ApiController
     {
         // GET: api/Test
-        public IEnumerable<string> Get()
+        public IEnumerable<string> GetAllMovies()
         {
             return new string[] { "value1", "value2" };
         }
@@ -22,7 +22,7 @@ namespace Unity_WebAPI_.Controllers
         }
 
         // POST: api/Test
-        public void Post([FromBody]string value)
+        public void NewMovie([FromBody]string value)
         {
         }
 
