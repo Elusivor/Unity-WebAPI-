@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using Unity_WebAPI_.Handlers;
 
 namespace Unity_WebAPI_
 {
@@ -10,6 +11,9 @@ namespace Unity_WebAPI_
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
+            //config.MessageHandlers.Add(new FullPipelineTimerHandler());
+            //config.MessageHandlers.Add(new APIKeyHandle());
+            config.MessageHandlers.Add(new LabAPI04Handler());
 
             // Web API routes
             config.MapHttpAttributeRoutes();

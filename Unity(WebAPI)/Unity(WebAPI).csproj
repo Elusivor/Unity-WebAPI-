@@ -102,6 +102,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Handlers\LabAPI04Handler.cs" />
+    <Compile Include="Handlers\APIKeyHandle.cs" />
     <Compile Include="Handlers\FullPipelineTimerHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

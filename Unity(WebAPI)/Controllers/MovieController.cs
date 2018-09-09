@@ -27,15 +27,22 @@ namespace Unity_WebAPI_.Controllers
         public void Post([FromBody]string value)
         {
         }
-        [HttpPost,Route("{id}")]
+        [HttpPut,Route("{value}")]
         // PUT: api/Movie/5
-        public void Put(int id, [FromBody]string value)
+        public string Put(string value)
         {
+            return $"Put {value}";
         }
-        [HttpDelete, Route("{id}")]
+        [HttpDelete, Route("{value}")]
         // DELETE: api/Movie/5
-        public void Delete(int id)
+        public string Delete(string value)
         {
+            return $"Delete {value}";
+        }
+        [HttpPatch, Route("{value}")]
+        public string Patch(string value)
+        {
+            return $"Patch {value}";
         }
     }
 }
